@@ -73,6 +73,8 @@ class BlogPost(db.Model):
     img_url = db.Column(db.String(250), nullable=False)
     # Parent relationship to the comments
     comments = relationship("Comment", back_populates="parent_post")
+    from os import getenv
+    from dotenv import load_dotenv
 
 
 # Create a User table for all your registered users
